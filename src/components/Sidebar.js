@@ -9,6 +9,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import "./myStyles.css"
 import { IconButton } from '@mui/material';
 import ConversationItem from './ConversationItem';
+import ChatArea from './ChatArea';
+
 function Sidebar() {
   const [conversations, setConversations] = useState([
     {
@@ -44,15 +46,17 @@ function Sidebar() {
       <IconButton>
      <SearchIcon />
      </IconButton>
-     <input type="text" placeholder="Search" className='search-box'/>
+     <input type="text" placeholder="search" className='search-box'/>
     </div>
     <div className='sb-conversations'>
       {conversations.map((conversation) => {
-        return <ConversationItem props={conversation} />
+        return( 
+        <ConversationItem props={conversation} key={conversation.name} />
+        );
       })}
      </div>
     </div>
   );
 }
 
-export default Sidebar;
+export default Sidebar; 

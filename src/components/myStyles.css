@@ -13,11 +13,6 @@
     flex-direction: column;
 }
 
-.workArea-container{
-    background-color: aliceblue;
-    flex: 0.7;
-}
-
 .sb-header{
     background-color: white;
     border-radius: 20px;
@@ -42,6 +37,7 @@
     border: none;
     margin-left: 10px;
     font-size: 1.25rem;
+    color: rgba(0, 0, 0, 0.54);
 }
 
 .sb-conversations{
@@ -53,6 +49,7 @@
 }
 
 .conversation-container{
+    position: relative;
     display: grid;
     grid-template-columns: 32px auto auto;
     grid-template-rows: auto auto;
@@ -68,5 +65,110 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #d9d9d9;
+    font-family: "Roboto";
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white;
+    height: 32px;
+    width: 32px;
+    padding: 2px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    justify-self: center;
+    align-self: center;
 
+}
+
+.con-title{
+    grid-area: 1/2/2/4;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.con-timeStamp{
+    position: absolute;
+    bottom: -8px;
+    right: 5px;
+    justify-self: end;
+    font-family: "Roboto";
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.54);
+
+}
+
+.con-lastMessage {
+    font-family: "Roboto";
+    font-size: 0.75rem;
+    padding: 2px;
+}
+
+.chatArea-container{
+    display: flex;
+    flex-direction: column;
+    flex: 0.7;
+
+}
+
+.chatArea-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.messages-container{
+    background-color: white;
+    flex: 1;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: scroll;
+}
+
+.text-input-area{
+    background-color: white;    
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.messageBox{
+    display: flex;
+    flex-direction: column;
+    background-color: lightcoral;
+    width: max-content;
+    padding: 10px 10px;
+    margin: 5px;
+    border-radius: 333px;
+    border-bottom-right-radius: 0;
+    font-family: "Roboto";
+
+}
+
+.self-message-container{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.other-message-container{
+    background-color: #d9d9d9;
+    width: max-content;
+    padding: 10px 10px;
+    margin: 5px;
+    border-radius: 333px;
+    border-bottom-left-radius: 0;
 }
