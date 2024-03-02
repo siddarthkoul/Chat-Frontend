@@ -35,6 +35,7 @@
 .search-box{
     outline-width: 0;
     border: none;
+    flex: 1;
     margin-left: 10px;
     font-size: 1.25rem;
     color: rgba(0, 0, 0, 0.54);
@@ -87,9 +88,6 @@
 }
 
 .con-timeStamp{
-    position: absolute;
-    bottom: -8px;
-    right: 5px;
     justify-self: end;
     font-family: "Roboto";
     font-size: 0.75rem;
@@ -134,8 +132,12 @@
     margin: 10px;
     border-radius: 20px;
     overflow: scroll;
+    scrollbar-width: none;
 }
 
+.messages-container::-webkit-scrollbar{
+    display: none;
+}
 .text-input-area{
     background-color: white;    
     padding: 10px 10px;
@@ -171,4 +173,64 @@
     margin: 5px;
     border-radius: 333px;
     border-bottom-left-radius: 0;
+
+}
+
+.self-timeStamp{
+    display: flex;
+    align-self: flex-end;
+    font-size: 0.75rem;
+    font-weight: lighter;
+
+
+}
+
+.welcome-logo{
+    height: 20vw;
+}
+.welcome-container{
+    flex:0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: "Roboto";
+    color: rgba(0, 0, 0, 0.54);
+    border-bottom: 5px solid #63d7b0;
+    border-radius: 20px;
+}
+
+.createGroups-container{
+    flex: 0.7;
+    align-self: center;
+    padding: 20px 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-container{
+    height: 90vh;
+    width: 90vh;
+    background-color: #f4f5f8;
+    display: flex;
+    border-radius: 20px;
+}
+
+.image-container{
+    flex: 0.3;
+}
+
+.login-box{
+    flex: 0.7;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    font-family: "Roboto";
+    color: #63d7b0;
+    font-weight: bolder;
+    
 }
