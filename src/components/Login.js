@@ -10,10 +10,12 @@ function Login() {
         </div>
         <div className='login-box'>
             <p>Login to your Account</p>
-            <TextField
-                id="standard-basic"
-                label="Enter Username"
-                variant="outlined" />
+            <TextField 
+            id="outlined-basic" 
+            label="Enter Username" 
+            variant="outlined" 
+            />
+
             <TextField
                 id="outlined-password-input"
                 label="Password"

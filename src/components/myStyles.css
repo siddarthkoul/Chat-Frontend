@@ -235,5 +235,15 @@
     font-family: "Roboto";
     color: #63d7b0;
     font-weight: bolder;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;   
+}
+
+.login-box p {
+    margin-bottom: 20px; 
+    font-size: 30px;
+    font-family: "Roboto";
 }
