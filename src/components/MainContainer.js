@@ -6,6 +6,8 @@ import Welcome from './Welcome';
 import CreateGroups from './CreateGroups';
 import Users_groups from './Users_groups';
 import { Outlet } from 'react-router-dom';
+import Users from './Users';
+import Groups from './Groups';
 
 function MainContainer() {
   
@@ -16,7 +18,8 @@ function MainContainer() {
       {/* <Welcome /> */}
       {/* <CreateGroups /> */}
       {/* <ChatArea props={conversations[0]} /> */}
-      {/* <Users_groups /> */}
+      {/* <Users /> */}
+      {/* <Groups /> */}
     </div>
   );
 }
