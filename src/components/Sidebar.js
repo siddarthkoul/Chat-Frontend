@@ -11,10 +11,13 @@ import { IconButton } from '@mui/material';
 import ConversationItem from './ConversationItem';
 import ChatArea from './ChatArea';
 import { useNavigate } from 'react-router-dom';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from '../Features/themeSlice';
+ 
 function Sidebar() {
   const navigate =  useNavigate();
-  const [lightTheme, setLightTheme] = useState(true);
+  const dispatch = useDispatch();
+  const lightTheme = useSelector((state)=>state.themeKey)
    const [conversations, setConversations] = useState([
     {
       name: "Test#1",
@@ -42,9 +45,7 @@ function Sidebar() {
       <IconButton onClick={()=>{navigate('users')}}><PersonAddIcon  className={ 'icon ' + (lightTheme ? "" : ' dark')  }/></IconButton>
       <IconButton onClick={()=>{navigate('groups')}}><GroupAddIcon  className={ 'icon ' + (lightTheme ? "" : ' dark')  }/></IconButton>
       <IconButton onClick={()=>{navigate('create-groups')}}><AddCircleIcon  className={ 'icon ' + (lightTheme ? "" : ' dark')  }/></IconButton>
-      <IconButton onClick={()=>{setLightTheme((prevValue)=>{
-        return !prevValue; 
-      })}}>
+      <IconButton onClick={()=>{dispatch(toggleTheme())}}>
         { lightTheme && <NightlightIcon className={ 'icon ' + (lightTheme ? "" : ' dark')  }/>  }
         { !lightTheme && <LightModeIcon  className={ 'icon ' + (lightTheme ? "" : ' dark')  }  />  }
       </IconButton>
@@ -67,4 +68,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar; 
+export default Sidebar;  

@@ -297,6 +297,7 @@
     overflow: scroll;
     scrollbar-width: none;
     padding: 10px 5px;
+    border-radius: 20px;
 }
 
 .ug-title{
