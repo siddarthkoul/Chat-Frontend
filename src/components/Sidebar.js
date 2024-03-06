@@ -13,6 +13,7 @@ import ChatArea from './ChatArea';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '../Features/themeSlice';
+import conversations from './Conversations'
  
 function Sidebar() {
   const navigate =  useNavigate();
@@ -38,6 +39,7 @@ function Sidebar() {
   return (
     <div className='Sidebar-container'>
     <div className={ 'sb-header' + (lightTheme ? "" : ' dark')  }>
+      <div className='other-icons'>
       <div>
         <IconButton><AccountCircleIcon className={ 'icon ' + (lightTheme ? "" : ' dark')  }/></IconButton>
       </div>
@@ -51,19 +53,14 @@ function Sidebar() {
       </IconButton>
       </div>
       </div>
+      </div> 
     <div className={ 'sb-search' + (lightTheme ? "" : ' dark')  }>
       <IconButton>
      <SearchIcon className={ 'icon ' + (lightTheme ? "" : ' dark')  }/>
      </IconButton>
      <input type="text" placeholder="search" className={ 'search-box' + (lightTheme ? "" : ' dark')  }/>
     </div>
-    <div className={ 'sb-conversations' + (lightTheme ? "" : ' dark')  }>
-      {conversations.map((conversation) => {
-        return( 
-        <ConversationItem props={conversation} key={conversation.name}/>
-        );
-      })}
-     </div>
+      <conversations />
     </div>
   );
 }
