@@ -13,7 +13,7 @@ import ChatArea from './ChatArea';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '../Features/themeSlice';
-import conversations from './Conversations'
+import Conversations from './Conversations'
  
 function Sidebar() {
   const navigate =  useNavigate();
@@ -39,11 +39,8 @@ function Sidebar() {
   return (
     <div className='Sidebar-container'>
     <div className={ 'sb-header' + (lightTheme ? "" : ' dark')  }>
-      <div className='other-icons'>
       <div>
-        <IconButton><AccountCircleIcon className={ 'icon ' + (lightTheme ? "" : ' dark')  }/></IconButton>
-      </div>
-      <div>
+      <IconButton><AccountCircleIcon className={ 'icon ' + (lightTheme ? "" : ' dark')  }/></IconButton>
       <IconButton onClick={()=>{navigate('users')}}><PersonAddIcon  className={ 'icon ' + (lightTheme ? "" : ' dark')  }/></IconButton>
       <IconButton onClick={()=>{navigate('groups')}}><GroupAddIcon  className={ 'icon ' + (lightTheme ? "" : ' dark')  }/></IconButton>
       <IconButton onClick={()=>{navigate('create-groups')}}><AddCircleIcon  className={ 'icon ' + (lightTheme ? "" : ' dark')  }/></IconButton>
@@ -53,14 +50,13 @@ function Sidebar() {
       </IconButton>
       </div>
       </div>
-      </div> 
     <div className={ 'sb-search' + (lightTheme ? "" : ' dark')  }>
       <IconButton>
      <SearchIcon className={ 'icon ' + (lightTheme ? "" : ' dark')  }/>
      </IconButton>
      <input type="text" placeholder="search" className={ 'search-box' + (lightTheme ? "" : ' dark')  }/>
     </div>
-      <conversations />
+      <Conversations />
     </div>
   );
 }
