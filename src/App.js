@@ -8,6 +8,7 @@ import ChatArea from './components/ChatArea';
 import CreateGroups from './components/CreateGroups';
 import Users from './components/Users';
 import Groups from './components/Groups';
+import Signup from './components/Signup';
 
   function App() {
     return (
@@ -16,6 +17,7 @@ import Groups from './components/Groups';
         {/* <Login /> */}
         <Routes>
           <Route path='/' element={<Login />} /> 
+          <Route path='signup' element={<Signup />} />
           <Route path='app' element={<MainContainer />}>
             <Route path='welcome' element={<Welcome />} />
             <Route path='chat' element={<ChatArea />} />
