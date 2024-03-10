@@ -16,7 +16,7 @@ import Signup from './components/Signup';
         {/* <MainContainer /> */}
         {/* <Login /> */}
         <Routes>
-          <Route path='/' element={<Login />} /> 
+          <Route path='/login' element={<Login />} /> 
           <Route path='signup' element={<Signup />} />
           <Route path='app' element={<MainContainer />}>
             <Route path='welcome' element={<Welcome />} />
