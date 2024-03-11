@@ -29,7 +29,7 @@ function Signup() {
             />
             <Button
                 variant="outlined">SIGN UP</Button>
-            <p className='have-account'>Already have an Account? <Link to={"/login"}>LogIn</Link></p>
+            <p className='have-account'>Already have an Account? <Link to={"/"}>LogIn</Link></p>
         </div>
     </div>
   );
