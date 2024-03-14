@@ -23,7 +23,7 @@ export default function Toaster({ message }) {
         }}
         message={message}
         action={[
-          <IconButton key={close} onClick={handleClose}>
+          <IconButton key="close" onClick={handleClose}>
             <CloseIcon />
           </IconButton>,
         ]}
