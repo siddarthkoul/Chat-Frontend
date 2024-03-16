@@ -1,5 +1,5 @@
 import { Alert, IconButton, Snackbar } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
+import CloseIcon from '@mui/icons-material/Close';
 import React from "react";
 
 export default function Toaster({ message }) {
@@ -10,27 +10,33 @@ export default function Toaster({ message }) {
     }
     setOpen(false);
   }
+
   return (
     <div>
       <Snackbar
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right"
+        }}
         open={open}
         autoHideDuration={3000}
         onClose={handleClose}
-        variant={"warning"}
+        variant="warning"
         ContentProps={{
-          "aria-describedby": "message-id",
+          "aria-describedby": "message-id"
         }}
         message={message}
         action={[
           <IconButton key="close" onClick={handleClose}>
             <CloseIcon />
-          </IconButton>,
+          </IconButton>
         ]}
       >
-        <Alert onClose={handleClose} severity="warning" sx={{ width: "30vw" }}>
-          {message}
-        </Alert>
+
+      <Alert onClose={handleClose} severity="warning" sx={{ width: '30vw' }}>
+      {message}
+      </Alert>
+
       </Snackbar>
     </div>
   );
